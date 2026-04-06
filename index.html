@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,62 +6,105 @@
     <title>Veltrixian Information</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        color: #ffffff;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: #000;
-    }
-    .video-background {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        object-fit: cover;
-        filter: blur(8px) brightness(0.6);
-        z-index: -1;
-    }
-    /* Khung chứa chính - Tạo hiệu ứng kính mờ (Glassmorphism) */
-    .glass-card {
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 2.5rem;
-        border-radius: 2rem;
-        width: 90%;
-        max-width: 600px;
-        text-align: center;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        animation: fadeInUp 0.8s ease forwards;
-    }
-    .avatar {
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 4px solid rgba(29, 185, 84, 0.5);
-    }
-    .avatar:hover {
-        transform: scale(1.1) rotate(5deg);
-        border-color: #1db954;
-    }
-    .btn {
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
+   <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            overflow: hidden;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(12px) brightness(0.7);
+            z-index: -1;
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+        }
+        .content-container {
+            background: rgba(0, 0, 0, 0.75);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+    
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s ease, height 0.4s ease;
+        }
+        .btn:hover::after {
+            width: 200%;
+            height: 200%;
+        }
+        .btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 15px rgb(255, 255, 255);
+        }
+        .avatar {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+        }
+        .avatar:hover {
+            transform: scale(1.2) rotate(8deg);
+            box-shadow: 0 0 30px rgba(29, 185, 84, 0.7);
+        }
+        .social-icon {
+            transition: all 0.4s ease;
+        }
+        .social-icon:hover {
+            transform: rotate(360deg) scale(1.4);
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, #1db954, #2ecc71);
+            transition: width 0.4s ease;
+        }
+        .section-title:hover::after {
+            width: 100%;
+        }
+        .content-section {
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .middle-section {
+            animation-delay: 0.2s;
+        }
+        .music-player {
+            animation-delay: 0.4s;
+        }
+    </style>
 
 <body>
 </head>
