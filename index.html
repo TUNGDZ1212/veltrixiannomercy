@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veltrixian Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        color: #ffffff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #000;
+    }
+    .video-background {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+        filter: blur(8px) brightness(0.6);
+        z-index: -1;
+    }
+    /* Khung chứa chính - Tạo hiệu ứng kính mờ (Glassmorphism) */
+    .glass-card {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2.5rem;
+        border-radius: 2rem;
+        width: 90%;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        animation: fadeInUp 0.8s ease forwards;
+    }
+    .avatar {
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 4px solid rgba(29, 185, 84, 0.5);
+    }
+    .avatar:hover {
+        transform: scale(1.1) rotate(5deg);
+        border-color: #1db954;
+    }
+    .btn {
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<body>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="https://motionbgs.com/media/9376/orangestar-postscript.960x540.mp4" type="video/mp4">
+    </video>
+    <div class="content-container">
+        <!-- Bio Section -->
+        <section class="text-center px-4 content-section">
+            <img src="https://media.tenor.com/S2QvGasXcugAAAAe/shhhh-cat-sigma.png" alt="Veltrixian" class="avatar w-20 h-20 md:w-24 md:h-24 rounded-full mx-auto mb-3 border-4 border-white/30">
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">Veltrixian</h1>
+            <h4 class="text-2xl md:text-3xl font-bold mb-2">Discord : veltrixiannomercy</h4>
+            <p class="text-xs md:text-sm max-w-lg mx-auto">
+                Tôi là một lập trình viên mới vào nghề còn ngu code, đam mê học hỏi và phát triển ứng dụng với Python. Với nền tảng kiến thức về Html, Python, tôi đang không ngừng khám phá các công nghệ mới. Dù gặp khó khăn với các hàm nâng cao và thiết kế giao diện, tôi tận dụng sức mạnh của AI, đặc biệt là Gemini, để hỗ trợ tạo ra các dòng code xịn và chất lượng. Mục tiêu của tôi là xây dựng những ap và web sáng tạo, tối ưu và mang lại giá trị thực tiễn!
+            </p>
+        </section>
+
+        <section class="flex justify-center gap-8 px-4 content-section middle-section">
+            <div>
+                <h2 class="section-title text-lg md:text-xl font-semibold mb-2">Sản Phẩm</h2>
+                <div class="flex gap-2">
+                    <a href="https://chuoiray.vercel.app" class="btn bg-blue-600 text-white py-1.5 px-3 rounded-lg text-xs md:text-sm hover:bg-blue-700">ChuoiRay Hub</a>
+                    <a href="https://ducknovis.site/executor/" class="btn bg-green-600 text-white py-1.5 px-3 rounded-lg text-xs md:text-sm hover:bg-green-700">Executor PC</a>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title text-lg md:text-xl font-semibold mb-2">Information</h2>
+                <div class="flex gap-3">
+                    <a href="https://www.youtube.com/@veltrixiannomercy" class="social-icon text-xl md:text-2xl hover:text-red-500"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/@nicholastung2k13" class="social-icon text-xl md:text-2xl hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                    <a href="https://discord.gg/zNVygXgazM" class="social-icon text-xl md:text-2xl hover:text-indigo-500"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </section>
+
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e80dd07d999eba2',t:'MTc3NTQ3OTI1MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"ebbc7009d85d4436b7b2c73b20e22af3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
